@@ -6,17 +6,17 @@ import hrsoft.test_monitor.base.BaseContract;
 
 /**
  * @author YangCihang
- * @since 17/10/9.
+ * @since 17/10/11.
  * email yangcihang@hrsoft.net
  */
 
-public interface MainContract {
-    interface View extends BaseContract.View<MainContract.Presenter> {
-        void onDataLoadedSuccess(List<String > models);
+public interface AccountContract {
+
+    interface View extends BaseContract.View<Presenter> {
+        void onLoginSuccess(List<String> models);
     }
 
     interface Presenter extends BaseContract.Presenter {
-        void requestData();
+        void requestLogin();
     }
 }
-

@@ -1,5 +1,8 @@
 package hrsoft.test_monitor.mvp.presenter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import hrsoft.test_monitor.base.BasePresenter;
 import hrsoft.test_monitor.mvp.contract.MainContract;
 import hrsoft.test_monitor.util.ToastUtil;
@@ -28,8 +31,13 @@ public class MainPresenter extends BasePresenter<MainContract.View> implements M
         Utility.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-              mView.onDataLoadedSuccess();
+                List<String> models = new ArrayList<>();
+                for (int i = 0; i < 50; i++) {
+                    models.add("" + i);
+                }
+                mView.onDataLoadedSuccess(models);
             }
-        },4000);
+        });
+
     }
 }

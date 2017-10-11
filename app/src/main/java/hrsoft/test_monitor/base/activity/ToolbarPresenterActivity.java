@@ -11,7 +11,7 @@ import hrsoft.test_monitor.base.BaseContract;
  * email yangcihang@hrsoft.net
  */
 
-public abstract class ToolbarActivityPresenter<Presenter extends BaseContract.Presenter> extends ToolbarActivity implements BaseContract.View<Presenter> {
+public abstract class ToolbarPresenterActivity<Presenter extends BaseContract.Presenter> extends ToolbarActivity implements BaseContract.View<Presenter> {
     protected Presenter mPresenter;
 
     @Override
